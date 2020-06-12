@@ -1,2 +1,2 @@
 # React-Kakaomap
-react kakao map practice
+React Kakao Map Practice
