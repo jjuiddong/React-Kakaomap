@@ -21,8 +21,24 @@ const Map = () => {
       kakao.maps.load(() => {
         let el = document.getElementById("map");
         let map = new kakao.maps.Map(el, {
-          center: new kakao.maps.Coords(523951.25, 1085073.75),
+          center : new kakao.maps.LatLng(33.450701, 126.570667),
         });
+
+        var linePath = [
+          new kakao.maps.LatLng(33.452344169439975, 126.56878163224233),
+          new kakao.maps.LatLng(33.452739313807456, 126.5709308145358),
+          new kakao.maps.LatLng(33.45178067090639, 126.5726886938753) 
+      ];
+
+        let _polyline = new kakao.maps.Polyline({
+          map: map,
+          path: linePath,
+          strokeWeight: 5,
+          strokeColor: '#FF0000',
+          strokeOpacity: 1.0,
+          strokeStyle: 'solid'
+        });
+
       });
     };
   }, []);
